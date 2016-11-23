@@ -1,0 +1,14 @@
+<form role="form" name="rssForm" class = "text-center">
+    <input ng-model="$ctrl.rssUrl" class="form-control input-sm" required placeholder = "Вставьте ссылку для получения RSS ленты"/>
+    <button class="btn btn-primary top-buffer" ng-click="$ctrl.load()" ng-disabled="rssForm.$invalid">Сформировать ленту</button>
+</form>
+
+<h3>{{$ctrl.feed.title}}</h3>
+
+<ul class="list-unstyled" >
+    <li ng-repeat="entry in $ctrl.feed.entries" class="panel panel-default panel-body">
+        <a ng-href="{{entry.link}}" target="_blank">{{entry.title}}</a>
+        <p>{{entry.contentSnippet}}</p>
+        <span class="small">{{entry.publishedDate}}</span>
+    </li>
+</ul>

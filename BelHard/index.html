@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RssGetApp</title>
+    <!-- Bootstrap main css file -->
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <!-- Custom css file -->
+    <link href="css/customStyles.css" rel="stylesheet"/>
+
+    <!-- Angular js file -->
+    <script src="lib/angular.min.js"></script>
+    <script src="js/core/core.feed.js"></script>
+    <script src="js/core/feed.service.js"></script>
+    <script src="js/feed-list/feed-list.module.js"></script>
+    <script src="js/feed-list/feed-list.component.js"></script>
+
+</head>
+<body>
+
+<section class="container">
+
+    <div class="page-header">
+        <h1>Тестовое задение: парсинг RSS-ленты</h1>
+        <p class="lead">Введите адрес RSS-ленты и нажмите на кнопку "Сформирвоать ленту".</p>
+    </div>
+
+    <div ng-app="feedList">
+        <feed-list></feed-list>
+    </div>
+</section>
+
+</body>
+</html>
